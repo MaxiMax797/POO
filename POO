@@ -1,0 +1,188 @@
+/*
+Intrebari programare orientata obiect:
+
+1.	Cat ocupa o variabila de tip int (se ia un considerare un compilator din VS2013 pe 32/64 de biti) ?
+O variabila de tip int ocupa 4 bytes
+
+2.	Cat ocupa o variabila de tip short int (se ia un considerare un compilator din VS2013 pe 32/64 de biti) ?
+O variabila de tip short int ocupa 2 bytes
+
+3.	Cat ocupa o variabila de tip long int (se ia un considerare un compilator din VS2013 pe 32/64 de biti) ?
+O variabila de tip long int ocupa 4 bytes
+
+4.	Cat ocupa o variabila de tip long long int (se ia un considerare un compilator din VS2013 pe 32/64 de biti) ?
+O variabila de tip long long int ocupa 8 bytes
+
+5.	Cat ocupa o variabila de tip bool (se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O variabila de tip bool ocupa 1 byte
+
+6.	Cat ocupa o variabila de tip float (se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O variabila de tip float ocupa 4 bytes
+
+7.	Cat ocupa o variabila de tip double (se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O variabila de tip double ocupa 8 bytes
+
+8.	Cat ocupa o variabila de tip long double (se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O variabila de tip long double ocupa 8 bytes
+
+9.	Cat ocupa o variabila de tip char (se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O varibabil de tip char ocupa 1 byte
+
+10.	Cat ocupa o variabila de tip pointer la int int *(se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+O variabila de tip pointer int int* ocupa 4 bytes
+
+O variabila de tip pointe la charchar* ocupa 4 bytes
+
+11. Cat ocupa o variabila de tip pointer la char char *(se ia un considerare un compilator din VS2013 pe 32 de biti) ?
+
+12.	Ce reprezinta cuvantul cheie this in C++ ?
+Cuvantul cheie this in C++ reprezinta adresa obiectului in cauza ( a tuturor functiilor unei clase care primesc un parametru ascuns, pointerul this ). Acesta poate fi utilizat in cadrul functiilor membre.
+
+13.	Ce reprezinta this in constructor ?
+This reprezinta o referinta la obiectul care se creeaza cu constructorul respectiv (a=new Masina() –in interiorul constructorului this.an va face referinta la anul masinii a)
+
+14.	Ce reprezinta this in destructor ?
+In destructor, this reprezinta obiectul asupra caruia se apeleaza
+
+15.	Ce reprezinta this intro functie membra ?
+Intro functie membra, this reprezinta obiectul asupra caruia se apeleaza
+
+16.	Ce reprezinta this intro functie statica ?
+Intro functie statica, this reprezinta obiectul asupra caruia se apeleaza
+
+17.	Ce este o functie membra ?
+Functia membra este o metoda a clasei si descrie o operatie ce poate fi facuta asupra unui obiect din clasa.
+
+18.	Ce este o functie statica ?
+Functia statica este acea functie a unei clase ce nu primeste parametru explicit this
+
+19.	Ce este un atribut static ?
+Un atribut static este un tip de atribut ce nu apartine unei instante ci intregii clase. Acesta se poate accesa din instante si functii statice.
+
+20.	Ce este un atribut constant ?
+Un atribut constant este un atribut al unei clase, a carui valoare nu poate fi modificata in timpul vietii instantei.
+
+21.	Cand se poate initializa un atribut constant ?
+Un atribut constant se poate initializa la momentul definirii lui. Totodata, acesta se poate initializa doar in lista de initializare a constructorului clase, la momentul insantierii acesteia.
+
+Ce reprezinta supraincarcarea ? Supraîncarcare a operatorilor (overloading): Acelasi operator are semnificatii diferite, care depind de numarul si tipul argumentelor
+
+22.	Care este utilitatea supraincarcarii ?
+Supraincarcarea este utila pentru a putea folosi operatorii respectivi in situatii si pe clase diferite(spraincarci = in functie de ce inseamna egalitatea pentru tine..daca la tine doua obiecte sunt egale daca au acelasi nume, etc)
+
+23.	Ce reprezinta supradefinirea ?
+Prin supradefinirea operatorilor se pot realiza operatii specifice unui nou tip de date la fel de usor ca in cazul tipurilor de date standard.
+Supradefinirea functiilor reprezinta procesul de a defini noi functii cu acelasi nume, insa cu
+antet diferit: difera tipul sau numarul parametrilor, tipul rezultat NU diferentiaza antete
+
+24.	Care este utilitatea supradefinirii ?
+Supradefinirea ofera flexibilitate atunci cand vine vorba de functii carora vrem sa le pasam combinatii diverse de parametrii.
+
+25.	Ce este o functie virtuala ?
+O functie virtuala este o functie a unei clase care poate fi supradefinita intro clasa derivata.
+
+
+26.	Prin ce se implementeaza conceptul de Polimorfism ?
+Este abilitatea de a procesa obiectele în mod diferit, în funcție de tipul sau de clasa lor. Mai exact, este abilitatea de a redefini metode pentru clasele derivate. De exemplu pentru o clasă Figura putem defini o metodă arie. Dacă Cerc, Dreptunghi, etc. ce vor extinde clasa Figura,
+acestea pot redefini metoda arie. Deci se implementeaza prin derivare.
+
+27.	Care sunt modificatorii de acces si ce vizibilitate ofera datelor/functiilor membre in cazul derivarii claselor?
+Private atribute accesibile DOAR din interiorul clasei sau obiectelor, nu si din cele derivate; Protected atribute accesibile doar din interiorul obiectelor, clasei, cat si cele derivate si Public atribute accesibile de oriunde din scopeul in care e definita clasa
+
+28.	In ce context este util modificatorul de acces private ?
+Prin acest modificator functille sau atributele private pot fi folosite doar de catre fct din clasa. Deci e util in cazul anumitor proprietati pe care nu dorim sa le vada toata lumea(ai clasa cont si nu vrei sa se vada ibanul)
+
+
+29.	Care sunt tipurile de constructori in cadrul unei clase si ce rol are fiecare?
+Default creare obiect initializare campuri (atentie la pointer!), parametrii idem, costructor de copiere apelat cand se creeaza parametrii unei functii si cand se declara o noua instanta
+
+30.	Care este diferenta intre rolul operatorului = si cel al constructorului de copiere? Operatorul = este folosit in situatia in care cele doua obiecte sunt deja create: ob1 = ob2;
+
+31.	Cand este apelat constructorul de copiere ?
+Necesitatea de copiere a obiectelor intervine când un obiect este transferat ca parametru sau rezultat al unei functii, sau la crearea unui obiect temporar. Solutia oferita de C++ consta în utilizarea unui constructor special, numit constructor de copiere. In absenta unei definitii explicite în cadrul clasei, compilatorul genereaza automat un constructor de copiere care initializeaza datele noului obiect cu valorile corespunzatoare din obiectul specificat, prin copiere membru cu membru. Aceasta nu este o solutie buna în cazul în care clasa contine membrii variabile dinamice si cand e necesara scrierea unui constructor de copiere special.
+
+32.	Cand este apelat operatorul = ?
+Operatorul = este apelat atunci cand se executa o instructiune precum: clasaA a = clasaA();
+clasaA b = clasaA("o valoare");
+a = b; pentru a copia in variabilele membre ale lui a deja initializate valorile din instanta b.
+
+
+33.	Ce este un memory leak ?
+Un memory leak reprezinta memoria care a fost alocat dar nu a fost dezalocata cand nu am mai avut nevoie de ea (sau a fost sters pointerul catre adresa ei si nu mai poate fi dealocata) si pe masura ce programul ruleaza si tot aloca memorie pentru obiecte, o parte din memorie va ramane alocata dar nefolosita si procesul va ocupa din ce in ce mai multa memorie pana cand o sa ramana sistemul fara memorie libera si procesul va fi omorat de sistemul de operare (sau se va bloca sistemul de operare si alte procese vor fi afectate)
+
+34.	Ce este un dangling pointer?
+Situatia in care un pointer indica o zona de memorie inexistenta.
+
+35.	Care este rolul destructorului ?
+Are rolul de a dezaloca spatiul pentru anumite obiecte care au fost alocate dinamic in prealabil.
+
+36.	Cand se apeleaza destructorul ?
+Se apeleaza automat cand obiectul urmeaza a fi sters, de ex cand iese din scope sau este rulat "delete obiect”.
+
+37.	Ce este memoria HEAP?
+Memoria HEAP este zona din RAM de unde programele isi pot rezerva bucati de memorie
+
+38.	Cum se aloca spatiu de memorie in HEAP?
+In HEAP se aloca spatiu de memorie Folosind functia malloc sau keywordul new, ce returneaza un pointer catre adresa de memorie a inceputului zonei la care a fost alocata cantitatea de memorie ceruta
+
+39.	Cum se elibereaza memoria in HEAP ?
+Folosind functia free() sau keywordul delete sau la terminarea programului.
+
+
+40.	Cum se genereaza un memory leak ?
+Un memory leak se realizeaza alocand memorie fara a o dealoca dupa ce nu mai avem nevoie de ea.
+
+41.	Care este rolul functiilor accesor in cadrul clasei?
+Membrii functiilor sunt privati. Pentru a avea acces la ei, ai nevoie de get si set.
+
+42.	Ce rol au functiile friend in cadrul claselor si care sunt caracteristicile acestora ? Functiile declarate friend au acces la zona privata a clasei, insa nefiind functii membre, nu primesc parametrul explicit this.
+
+43.	Ce reprezinta conceptul de incapsulare ?
+Asigură faptul că obiectele nu pot schimba starea internă a altor obiecte în mod direct (ci doar prin metode puse la dispoziție de obiectul respectiv); doar metodele proprii ale obiectului pot accesa starea acestuia. Fiecare tip de obiect expune o interfață pentru celelalte obiecte care specifică modul cum acele obiecte pot interacționa cu el.
+
+44.	Care este ordinea de apel a constructorilor in cadrul ierarhiilor de clase ?
+De sus in jos
+
+45. 	Care este ordinea de apel a destructorilor in cadrul ierarhiilor de clase ? De jos in sus (Derivata->Baza)
+
+7.4.	Supraincarea operatorului de atribuire =
+Dacă clasa derivată nu are supraîncărcat operatorul de atribuire atunci compilatorul va realiza copierea datelor membre moştenite apelând la supraîncărcările operatorului de atribuire definte în clasele de bază (dacă există), iar datele membre specifice vor fii copiate bit cu bit .
+Dacă clasa derivată are supraîncărcat operatorul de atribuire atunci acesta va realiza copierea tuturor datelor membre.
+
+3.	Ce sunt functiile inline ?
+Functiile (metodele) definite in interiorul clasei se numesc functii inline. Pentru o astfel de functie orice apel este inlocuit prin codul ei. O functie inline nu poate contine repetitive.
+
+4.	Auto-asignarea pentru operatorul =
+Verifica daca parametrul dat spre atribuire nu este chiar cel in care se doreste a se face atribuirea, practic incercam sa atribuim unui obiect pe el insusi.
+
+5.	Friend
+Se foloseste friend deoarece vrem sa accesam parametrii clasei si ea nu este o fucntie membra a clasei. De asemenea, sa nu mai fie nevoie sa folosim this.
+
+6.	Ostream& si returnarea out in supraincareacrea operatorului <<
+Se foloseste aceasta scriere pentru a returna o referinta la out, nu o copie, deoarece se face un shallow copy.
+
+7.	Care e rolul returnarii * this la operatorul =
+Pentru a returna o referinta a elementului atribuit pentru a nu-l modifica.
+
+8.	Ce reprezinta cuvantul cheie this in c++?
+Fiecare obiect in c++ are acces la propria adresa printr-un pointer numit this. Acesta e un parametru implicit la toate functiile member, asftel, intr-o functie membra, this poate fi folosit ca referinta la un obiect. Pes curt this pointeaza spre functia apelata.
+
+9.	Ce este o functie membra?
+O functie membru se apeleaza intodeauna inn stransa dependenta cu un obiect din clasa respectiva. Legatura dintr obiect si functie mambra se face prin operatorul . sau -> dupa cum obiectul este desemnat prin nume sau prin pointer.
+Metodele statice pot fi apelate independent de un obiect al clasei, folosind operatorul de dezolutine ::
+
+10.	Ce e o functie statica?
+Metodele statice se utilizeaza prin a sugera faptul ca actioneaza asupra instantelor clasei vazute ca un intreg si nu asupra instantelor clasei in mod individual. Pot actiona doar asupra atributelor statice(ale claselor). Nu pot actiona asupra atributelor obiectului curent(deoarece nu li se transmite pointerul this).
+
+11.	Ce reprezinta ::? (folosit la initierea contorului in afara clasei, etc)
+1)	To access a global variable when there is a local variable with same name:
+2)	To define a function outside a class.
+3)	To access a class’s static variables.
+4)	In case of multiple Inheritance:
+5)	Refer to a class inside another class:
+Pe scurt: sa nu intre intr-o bucla infinita constructorul de copiere pana ramane fara memorie
+
+12.	Ce este iterator in clasa STL?
+Iterators are used to point at the memory addresses of STL containers. They are primarily used in sequence of numbers, characters etc. They reduce the complexity and execution time of program.
+
+*/
